@@ -1,0 +1,17 @@
+{
+  "name": "ts-prac",
+  // Uses a dedicated, pre-built TypeScript & Node environment (Debian-based)
+  "image": "://microsoft.com",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      // Automatically installs helpful extensions for your TS workflow
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
